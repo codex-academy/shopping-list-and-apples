@@ -29,6 +29,6 @@ function totalProfitPerColor(apples, color, costMap) {
 	return 0;
 }
 
-function mostProfitableColor(apples, color, costMap) {
-	return 0;
+function mostProfitableColor(apples, costMap) {
+	return '';
 }
