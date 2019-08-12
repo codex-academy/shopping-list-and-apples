@@ -24,10 +24,12 @@ Do a paper prototype before you start and add that to your GitHub repository.
 
 * Storing the list state in LocalStorage.
 * Deleting items from the list.
-	* register `click` event handler on containing element to determine which
+	* register `click` event handler on containing element to determine which (using event bubbling)
 	* use `event.target` to get the element that was clicked
 	* Use [data-attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes) to find out which apple was clicked on.
-
+	* Update the data in the Factory Function accordingly.
+	* Re-render the screen
+	
 ## Apples
 
 Given a list of `apples` that was sold by a local fruiter seller in this format:
