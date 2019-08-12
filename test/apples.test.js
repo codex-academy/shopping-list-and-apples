@@ -85,67 +85,71 @@ describe("The apple seller functions", function() {
 	};
 
 	it("should be able to calculate the total number of apples sold", function() {
-		assert.equal(23, totalNumberSold(applesSoldList1));
-		assert.equal(40, totalNumberSold(applesSoldList2));
+		const appleTester = appleFactory();
+
+		assert.equal(23, appleTester.totalNumberSold(applesSoldList1));
+		assert.equal(40, appleTester.totalNumberSold(applesSoldList2));
 	});
 
 	it("should be able to calculate the total income from all the apples sold", function() {
-		assert.equal(136.32, totalIncome(applesSoldList1));
-		assert.equal(384.24, totalIncome(applesSoldList2));
+		const appleTester = appleFactory();
+		assert.equal(136.32, appleTester.totalIncome(applesSoldList1));
+		assert.equal(384.24, appleTester.totalIncome(applesSoldList2));
 	});
 
 	it("should be able to calculate the total income from all the green apples sold", function() {
-		assert.equal(68.50, totalIncomeGreenApples(applesSoldList1));
-		assert.equal(110.92, totalIncomeGreenApples(applesSoldList2));
+		const appleTester = appleFactory();
+		assert.equal(68.50, appleTester.totalIncomeGreenApples(applesSoldList1));
+		assert.equal(110.92, appleTester.totalIncomeGreenApples(applesSoldList2));
 	});
 
 	it("should be able to calculate the total profit from apples sold", function() {
-		
-		assert.equal(96.57, totalProfit(applesSoldList1, applePrices1));
-		assert.equal(316.69, totalProfit(applesSoldList2, applePrices2));
+		const appleTester = appleFactory();
+		assert.equal(96.57, appleTester.totalProfit(applesSoldList1, applePrices1));
+		assert.equal(316.69, appleTester.totalProfit(applesSoldList2, applePrices2));
 
 	});
 
 	it("should be able to calculate the total number of each color sold", function() {
-		
-		assert.equal(6, totalPerColorSold(applesSoldList1, 'red'));
-		assert.equal(7, totalPerColorSold(applesSoldList1, 'yellow'));
-		assert.equal(10, totalPerColorSold(applesSoldList1, 'green'));
+		const appleTester = appleFactory();
+		assert.equal(6, appleTester.totalPerColorSold(applesSoldList1, 'red'));
+		assert.equal(7, appleTester.totalPerColorSold(applesSoldList1, 'yellow'));
+		assert.equal(10, appleTester.totalPerColorSold(applesSoldList1, 'green'));
 
-		assert.equal(8, totalPerColorSold(applesSoldList2, 'red'));
-		assert.equal(21, totalPerColorSold(applesSoldList2, 'yellow'));
-		assert.equal(11, totalPerColorSold(applesSoldList2, 'green'));
+		assert.equal(8, appleTester.totalPerColorSold(applesSoldList2, 'red'));
+		assert.equal(21, appleTester.totalPerColorSold(applesSoldList2, 'yellow'));
+		assert.equal(11, appleTester.totalPerColorSold(applesSoldList2, 'green'));
 
 	});
 
 	it("should be able to calculate the total income per color sold", function() {
-		
-		assert.equal(30.50, totalIncomePerColor(applesSoldList1, 'red'));
-		assert.equal(37.32, totalIncomePerColor(applesSoldList1, 'yellow'));
-		assert.equal(68.50, totalIncomePerColor(applesSoldList1, 'green'));
+		const appleTester = appleFactory();
+		assert.equal(30.50, appleTester.totalIncomePerColor(applesSoldList1, 'red'));
+		assert.equal(37.32, appleTester.totalIncomePerColor(applesSoldList1, 'yellow'));
+		assert.equal(68.50, appleTester.totalIncomePerColor(applesSoldList1, 'green'));
 
-		assert.equal(54.50, totalIncomePerColor(applesSoldList2, 'red'));
-		assert.equal(218.82, totalIncomePerColor(applesSoldList2, 'yellow'));
-		assert.equal(110.92, totalIncomePerColor(applesSoldList2, 'green'));
+		assert.equal(54.50, appleTester.totalIncomePerColor(applesSoldList2, 'red'));
+		assert.equal(218.82, appleTester.totalIncomePerColor(applesSoldList2, 'yellow'));
+		assert.equal(110.92, appleTester.totalIncomePerColor(applesSoldList2, 'green'));
 
 	});
 
 	it("should be able to calculate the total profit per color sold", function() {
-		
-		assert.equal(20.00, totalProfitPerColor(applesSoldList1, 'red', applePrices1));
-		assert.equal(21.57, totalProfitPerColor(applesSoldList1, 'yellow', applePrices1));
-		assert.equal(55.00, totalProfitPerColor(applesSoldList1, 'green', applePrices1));
+		const appleTester = appleFactory();
+		assert.equal(20.00, appleTester.totalProfitPerColor(applesSoldList1, 'red', applePrices1));
+		assert.equal(21.57, appleTester.totalProfitPerColor(applesSoldList1, 'yellow', applePrices1));
+		assert.equal(55.00, appleTester.totalProfitPerColor(applesSoldList1, 'green', applePrices1));
 
-		assert.equal(42.10, totalProfitPerColor(applesSoldList2, 'red', applePrices2));
-		assert.equal(175.77, totalProfitPerColor(applesSoldList2, 'yellow', applePrices2));
-		assert.equal(98.82, totalProfitPerColor(applesSoldList2, 'green', applePrices2));
+		assert.equal(42.10, appleTester.totalProfitPerColor(applesSoldList2, 'red', applePrices2));
+		assert.equal(175.77, appleTester.totalProfitPerColor(applesSoldList2, 'yellow', applePrices2));
+		assert.equal(98.82, appleTester.totalProfitPerColor(applesSoldList2, 'green', applePrices2));
 
 	});
 
 	it("should be able to find the most profitable apple color", function() {
-		
-		assert.equal('green', mostProfitableColor(applesSoldList1, 'green', applePrices1));
-		assert.equal('yellow', mostProfitableColor(applesSoldList2, 'yellow', applePrices2));
+		const appleTester = appleFactory();
+		assert.equal('green', appleTester.mostProfitableColor(applesSoldList1, 'green', applePrices1));
+		assert.equal('yellow', appleTester.mostProfitableColor(applesSoldList2, 'yellow', applePrices2));
 
 	});
 
