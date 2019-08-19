@@ -146,12 +146,7 @@ describe("The apple seller functions", function() {
 
 	});
 
-	it("should be able to find the most profitable apple color", function() {
-		const appleTester = appleFactory();
-		assert.equal('green', appleTester.mostProfitableColor(applesSoldList1, 'green', applePrices1));
-		assert.equal('yellow', appleTester.mostProfitableColor(applesSoldList2, 'yellow', applePrices2));
 
-	});
 
 });
 

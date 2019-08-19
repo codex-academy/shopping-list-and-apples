@@ -208,19 +208,3 @@ return getKeyByValue(theMostProfitableApple, highest)
 }
 
 
-
-// for (var i in costMap) {
-// 	costEntry = costMap[i];
-// 	for (var i = 0; i < priceKeys.length; i++) {
-// 		var aPriceKey = priceKeys[i]
-
-// 		if (aPriceKey == costMap[aPriceKey]) {
-
-
-		
-// 		}
-// 	}
-
-
-
-// }
